@@ -1,0 +1,96 @@
+<html>
+
+    <head>
+        <title>Your Prediction</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+            body {
+               background-image: url('https://www.insurancethoughtleadership.com/sites/default/files/featured_images/Data.jpg'); /* Replace with your desired background image URL */ /* Replace with your desired background image URL */
+                background-size: cover;
+                background-position: center;
+                font-family: 'Poppins', sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                color: #333;
+            }
+
+            .overlay {
+                background-color: rgba(255, 255, 255, 0.85);
+                padding: 50px;
+                border-radius: 15px;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+                text-align: center;
+                max-width: 500px;
+                width: 90%;
+            }
+
+            h2 {
+                color: rgb(68, 7, 188);
+                font-size: 28px;
+                font-weight: 700; /* Bold */
+                margin-bottom: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            h2::before {
+                content: "🔮"; /* Emoji added before title */
+                font-size: 1.5em;
+                margin-right: 10px;
+            }
+
+            .output {
+                font-size: 24px;
+                font-weight: 500;
+                color: #444;
+                background-color: #f0f8ff;
+                padding: 20px;
+                border-radius: 10px;
+                margin-bottom: 30px;
+                display: inline-block;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .recommendation {
+                font-size: 18px;
+                color: #555;
+                margin-top: 10px;
+            }
+
+            .back-button {
+                background-color: #3498db;
+                color: white;
+                padding: 12px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+                transition: background-color 0.3s;
+            }
+
+            .back-button:hover {
+                background-color: #2980b9;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="overlay">
+            <h2>Your Prediction</h2>
+            <div class="output">{{ output }}</div>
+
+            <div class="recommendation">
+                Based on your input, this is your predicted insurance premium charge. If you want to improve your health profile and potentially reduce future charges, consider reviewing your lifestyle and health indicators.
+            </div>
+
+            <br>
+            <button class="back-button" onclick="window.history.back()">Go Back</button>
+        </div>
+    </body>
+</html>
+

@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <title>Thank You!</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+            body {
+                background-image: url('https://www.ultimatebeaver.com/wp-content/uploads/2016/12/Thank-you-page-template_header.png');
+                background-size: cover;
+                background-position: center;
+                font-family: 'Poppins', sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                color: #333;
+            }
+
+            .overlay {
+                background-color: rgba(255, 255, 255, 0.9);
+                padding: 40px;
+                border-radius: 20px;
+                box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
+                text-align: center;
+                max-width: 600px;
+                width: 90%;
+            }
+
+            h1 {
+                color: #2ecc71;
+                font-size: 40px;
+                font-weight: 700;
+                margin: 0;
+                font-family: 'Roboto', sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            h1::before {
+                content: "🎉"; /* Emoji added before title */
+                font-size: 2em;
+                margin-right: 10px;
+            }
+
+            p {
+                font-size: 20px;
+                color: #555;
+                margin-top: 20px;
+                line-height: 1.6;
+                font-family: 'Poppins', sans-serif;
+            }
+
+            .recommendation {
+                font-size: 18px;
+                color: #333;
+                margin-top: 20px;
+                font-weight: 500;
+                font-family: 'Poppins', sans-serif;
+            }
+
+            .recommendation p {
+                margin: 10px 0;
+            }
+
+            .back-button {
+                background-color: #3498db;
+                color: white;
+                padding: 14px 24px;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                font-size: 18px;
+                margin-top: 30px;
+                transition: background-color 0.3s;
+                font-family: 'Roboto', sans-serif;
+            }
+
+            .back-button:hover {
+                background-color: #2980b9;
+            }
+
+            .back-button:active {
+                background-color: #1f77d0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="overlay">
+            <h1>Thank You!</h1>
+            <p>Your insurance prediction request has been successfully submitted! We appreciate your trust in us.</p>
+            <div class="recommendation">
+                <p>💡 Remember: Your health and lifestyle choices can influence future insurance premiums. Stay healthy and make informed decisions for better financial and personal outcomes!</p>
+            </div>
+            <button class="back-button" onclick="window.location.href='/'">Go to Homepage</button>
+        </div>
+    </body>
+</html>
+

@@ -1,0 +1,229 @@
+<html>
+    <head>
+        <title>Insurance Prediction</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+            
+            body {
+                background-image: url('https://i.ytimg.com/vi/ZgsHP3NdoHI/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCBtkDhQdskPXsVA_qQbPiOyMTrTQ');
+                background-size: cover;
+                background-position: center;
+                font-family: 'Poppins', sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                color: #333;
+            }
+
+            form {
+                background-color: rgba(255, 255, 255, 0.9);
+                padding: 40px;
+                border-radius: 15px;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+                text-align: center;
+                width: 400px;
+                max-width: 90%;
+            }
+
+            h2 {
+                font-size: 28px;
+                font-weight: 700;
+                margin-bottom: 20px;
+                color: #2c3e50;
+            }
+
+            hr {
+                border: 1px solid #ccc;
+                margin-bottom: 20px;
+            }
+
+            label {
+                font-weight: 600;
+                font-size: 16px;
+                display: block;
+                text-align: left;
+                margin: 10px 0 5px;
+            }
+
+            select, input {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                font-size: 16px;
+            }
+
+            button {
+                background-color: #3498db;
+                color: white;
+                padding: 12px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+                width: 100%;
+                margin-top: 20px;
+                transition: background-color 0.3s;
+            }
+
+            button:hover {
+                background-color: #2980b9;
+            }
+
+            a button {
+                background-color: #2ecc71;
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            a button:hover {
+                background-color: #27ae60;
+            }
+
+            /* New Design for Prediction Question */
+            .highlighted {
+                font-size: 20px;
+                color: #e74c3c;
+                font-weight: 700;
+                text-align: center;
+                margin-bottom: 20px;
+                border: 3px solid #e74c3c;
+                padding: 20px;
+                border-radius: 15px;
+                background: rgba(231, 76, 60, 0.1);
+                position: relative;
+                display: inline-block;
+                text-align: center;
+                line-height: 1.5;
+            }
+
+            .highlighted:before {
+                content: '🔮';
+                font-size: 30px;
+                position: absolute;
+                top: -40px;
+                left: calc(50% - 15px);
+                animation: bounce 2s infinite;
+            }
+
+            @keyframes bounce {
+                0%, 100% {
+                    transform: translateY(0);
+                }
+                50% {
+                    transform: translateY(-10px);
+                }
+            }
+
+            .highlighted span {
+                display: block;
+                font-size: 14px;
+                margin-top: 5px;
+                color: #c0392b;
+            }
+
+            .highlighted small {
+                font-size: 12px;
+                color: #c0392b;
+                font-weight: 400;
+            }
+
+        </style>
+    </head>
+    <body>
+        <form action="{{ url_for('predict') }}" method="post">   
+            <h2>Get Insurance Premium Prediction</h2>
+            <hr>
+            
+            <!-- Enhanced Prediction Question Section -->
+            <div class="highlighted">
+                🔮 Want to know your insurance premium? Fill out the details below to get your prediction! 
+                <span>(Just a few clicks away!)</span>
+                <small>We predict based on your region, health, and other factors.</small>
+            </div>
+
+            <label for="region">Region:</label>
+            <select name="region" id="region">
+                <option value="se">Southeast</option>
+                <option value="sw">Southwest</option>
+                <option value="ne">Northeast</option>
+                <option value="nw">Northwest</option>
+            </select><br>
+
+            <label for="children">Children:</label>
+            <select name="children" id="children">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select><br>
+
+            <label for="health">Health Status:</label>
+            <select name="health" id="health">
+                <option value="1">Underweight</option>
+                <option value="2">Healthy Weight</option>
+                <option value="3">Overweight</option>
+                <option value="4">Obese</option>
+            </select><br>
+
+            <label for="smoker">Do you smoke?</label>
+            <select name="smoker" id="smoker">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select><br>
+
+            <label for="gender">Gender:</label>
+            <select name="gender" id="gender">
+                <option value="0">Female</option>
+                <option value="1">Male</option>
+            </select><br>
+
+            <label for="bmi">BMI:</label>
+            <input type="text" name="bmi" id="bmi" required><br>
+
+            <label for="age">Age:</label>
+            <input type="text" placeholder="Enter your age" name="age" id="age" required><br><br>
+
+            <button type="submit">Submit</button>
+            <a href="/about_me"><button type="button">About Me</button></a>
+        </form>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
